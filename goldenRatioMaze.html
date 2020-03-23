@@ -10,17 +10,30 @@
 <body>
     <div id="outer"></div>
     <script>
-    let element = document.getElementById("outer")
-    element.style.width = "900px";
-    element.style.height = "555px";
+    
+    let width = [900, 343.8, 343.8, 131.34, 131.34, 50.17]; 
+    let height = [555, 555, 212, 212, 80.98, 80.98, 30.93] ;
+    let children = [];
+    let colors = ["green", "black", "blue", "yellow", "brown"];
+    let element = document.getElementById("outer");
+    element.style.width = width[0] + "px";
+    element.style.height = height[0] + "px";
     element.style.backgroundColor = "red";
-        // for(let i=0; i<=5; i++){
-        //     let div = document.createElement("div");
-        //     div.className="div-"+i;
-        //     div.style.width: 
-        //     ele.appendChild(div);
-        //     console.log(div.className);
-        // }
+            for(let i=0; i<=4 ; i++){
+            let div = document.createElement("div");
+            div.style.height = height[i+1] + "px"; 
+            div.style.width = width[i+1] + "px"; 
+            div.style.backgroundColor = colors[i];
+            children.push(div);
+            element.appendChild(div);
+            }
+        
+        for(i=0; i<children.length; i++){
+        children[i].appendChild(children[i+1]);
+        }
+
+        
+
     </script>
 </body>
 </html>

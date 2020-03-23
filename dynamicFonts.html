@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Unsteady Oversteer W05 Regular";
+        src: url("./a52c9f77-8a79-4d79-9364-b386b1795771.ttf");
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="form">
+      <label>Enter the text:</label>
+      <input type="text" id="input" placeholder="Enter some text..." />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="output"></p>
+
+    <script>
+      const form = document.getElementById("form");
+      const output = document.getElementById("output");
+      form.addEventListener("submit", logOutput);
+
+      function logOutput(e) {
+        output.textContent = input.value;
+        (output.style.fontFamily = "Unsteady Oversteer W05 Regular"),
+          "sans-serif";
+        output.style.fontSize = "48px";
+        e.preventDefault();
+      }
+    </script>
+  </body>
+</html>
